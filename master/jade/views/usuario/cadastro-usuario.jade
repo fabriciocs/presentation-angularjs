@@ -1,0 +1,31 @@
+h3 
+  | {{pageTitle()}}
+  small {{ 'dashboard.WELCOME' | translate:{ appName: app.name } }}  !
+
+// START row
+.row
+  .col-md-12
+    form.form-horizontal(action='#', validate-form='', novalidate='')
+      // START panel
+      .panel.panel-default
+        .panel-body
+          h4 Cadastro de Usuário
+          fieldset
+            .form-group
+              label.col-sm-2.control-label Nome
+              .col-sm-10
+                input.form-control(type='text', ng-model='usuario.nome' name='required', required="required")
+          fieldset
+            .form-group
+              label.col-sm-2.control-label Email
+              .col-sm-10
+                input.form-control(type='email', ng-model='usuario.email', name='email', data-parsley-type='email', required='required')
+          fieldset
+            .form-group
+              label.col-sm-2.control-label Cpf
+              .col-sm-10
+                input.form-control(type='text', name='cpf', required='required')
+        .panel-footer.text-center
+          button.btn.btn-info(type='submit') Run validation
+      // END panel
+// END row
