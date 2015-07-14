@@ -14,7 +14,7 @@ function ($httpProvider, $stateProvider, $urlRouterProvider, $controllerProvider
   App.service    = $provide.service;
   App.constant   = $provide.constant;
   App.value      = $provide.value;
-  App.url        = 'http://localhost:3000/';
+  App.url        = 'http://192.7.1.180:3000/';
 
   // LAZY MODULES
   // ----------------------------------- 
