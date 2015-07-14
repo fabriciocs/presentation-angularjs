@@ -11,7 +11,7 @@ App.factory('AuthRestangular', ['Restangular','principal','$rootScope',function(
 			});
 		  return Restangular.withConfig(function(RestangularConfigurer) {
 			  RestangularConfigurer.setDefaultHeaders(principal.authHeaders());
-			  RestangularConfigurer.setBaseUrl('http://localhost:3000/');
+			  RestangularConfigurer.setBaseUrl(App.url);
 			  RestangularConfigurer.setRestangularFields({
 			      id: "_id"
 			  });
