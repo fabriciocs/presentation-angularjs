@@ -1,0 +1,46 @@
+<h3>
+   {{pageTitle()}}
+   <small>{{ 'dashboard.WELCOME' | translate:{ appName: app.name } }} !</small>
+</h3>
+<!-- START row-->
+<div class="row">
+   <div class="col-md-12">
+      <form action="#" validate-form="" novalidate="" class="form-horizontal">
+         <!-- START panel-->
+         <div class="panel panel-default">
+            <div class="panel-body">
+               <h4>Cadastro de Usuário</h4>
+               <fieldset>
+                  <div class="form-group">
+                     <label class="col-sm-2 control-label">Nome</label>
+                     <div class="col-sm-10">
+                        <input type="text" ng-model="usuario.nome" name="required" required="required" class="form-control" />
+                     </div>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <div class="form-group">
+                     <label class="col-sm-2 control-label">Email</label>
+                     <div class="col-sm-10">
+                        <input type="email" ng-model="usuario.email" name="email" data-parsley-type="email" required="required" class="form-control" />
+                     </div>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <div class="form-group">
+                     <label class="col-sm-2 control-label">Cpf</label>
+                     <div class="col-sm-10">
+                        <input type="text" name="cpf" required="required" class="form-control" />
+                     </div>
+                  </div>
+               </fieldset>
+            </div>
+            <div class="panel-footer text-center">
+               <button type="submit" class="btn btn-info">Run validation</button>
+            </div>
+         </div>
+         <!-- END panel-->
+      </form>
+   </div>
+</div>
+<!-- END row-->
