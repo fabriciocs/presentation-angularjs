@@ -75,7 +75,7 @@ function ($httpProvider, $stateProvider, $urlRouterProvider, $controllerProvider
   App.service    = $provide.service;
   App.constant   = $provide.constant;
   App.value      = $provide.value;
-  App.url        = 'http://192.7.1.180:3000/';
+  App.url        = 'http://presentationnode-bestsmart.rhcloud.com';
 
   // LAZY MODULES
   // ----------------------------------- 
@@ -480,7 +480,7 @@ App.controller('SidebarController', ['$rootScope', '$scope', '$state', '$locatio
 
     $scope.loadSidebarMenu = function() {
 
-      var menuJson = App.url+'server/sidebar-menu.json',
+      var menuJson = App.url+'/server/sidebar-menu.json',
           menuURL  = menuJson + '?v=' + (new Date().getTime()); // jumps cache
       $http.get(menuURL)
         .success(function(items) {
@@ -1200,14 +1200,6 @@ App.controller('SingleViewCtrl', [ '$scope', 'AuthRestangular', '$log','principa
 	}
 } ]);
 
-/**
- * 
- */
-App.controller('LoginCtrl',['$scope','principal', function($scope, principal){
-	$scope.login = function(){
-		principal.login($scope.identity);
-	}
-}]);
 
 App.factory('AuthRestangular', ['Restangular','principal','$rootScope',function(Restangular, principal, $rootScope) {
   return  { 
@@ -1344,3 +1336,11 @@ App.factory('authorization', ['$rootScope', '$state', 'principal',
 	};
 }
 ])
+/**
+ * 
+ */
+App.controller('LoginCtrl',['$scope','principal', function($scope, principal){
+	$scope.login = function(){
+		principal.login($scope.identity);
+	}
+}]);

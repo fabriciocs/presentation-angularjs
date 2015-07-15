@@ -14,7 +14,7 @@ function ($httpProvider, $stateProvider, $urlRouterProvider, $controllerProvider
   App.service    = $provide.service;
   App.constant   = $provide.constant;
   App.value      = $provide.value;
-  App.url        = 'http://presentationnode-bestsmart.rhcloud.com/';
+  App.url        = 'http://presentationnode-bestsmart.rhcloud.com';
 
   // LAZY MODULES
   // ----------------------------------- 
